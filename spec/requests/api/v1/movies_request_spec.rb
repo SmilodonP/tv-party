@@ -2,26 +2,17 @@ require 'rails_helper'
 
 RSpec.describe "Movie Endpoints:", type: :request do
   describe "#index" do
-    context "top rated movies", :vcr do
-      xit "retrieves the top rated movies" do
+    context "top rated movies" do
+      it "retrieves the title and vote average of the top 20 movies", :vcr do
         get "/api/v1/movies/index"
 
         expect(response).to be_successful
         json = JSON.parse(response.body, symbolize_names: true)
 
-        expect(json[:data][:]
-        expect(json[:data][:]
-        expect(json[:data][:]
-        expect(json[:data][:]
-        expect(json[:data][:]
-        expect(json[:data][:]
-
-      end
-      xit "limits the total retuned movies to 20" do
-        get "/api/v1/movies/index"
-      end
-      xit "includes the title and vote average of every movie" do
-        get "/api/v1/movies/index"
+        expect(json[:data]).not_to be(nil)        
+        expect(json[:data].length).to eql(20)
+        expect(json[:data][:attributes]).to have_key(:title)
+        expect(json[:data][:attributes]).to have_key(:vote_average)
       end
     end
 
