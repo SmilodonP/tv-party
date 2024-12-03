@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_23_211921) do
+ActiveRecord::Schema[7.1].define(version: 2024_12_02_232328) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_211921) do
     t.datetime "updated_at", null: false
     t.string "api_key"
     t.index ["api_key"], name: "index_users_on_api_key", unique: true
+  end
+
+  create_table "viewing_parties", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "start_time", null: false
+    t.datetime "end_time", null: false
+    t.integer "movie_id", null: false
+    t.string "movie_title", null: false
+    t.json "invitees", default: [], null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
