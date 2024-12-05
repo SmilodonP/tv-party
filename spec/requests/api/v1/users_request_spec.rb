@@ -70,9 +70,9 @@ RSpec.describe "Users API", type: :request do
 
   describe "Get All Users Endpoint" do
     it "retrieves all users but does not share any sensitive data" do
-      User.create!(name: "Tom", username: "myspace_creator", password: "test123")
+      User.create!(name: "Tom", username: "mr_myspace", password: "test123")
       User.create!(name: "Oprah", username: "oprah", password: "abcqwerty")
-      User.create!(name: "Beyonce", username: "sasha_fierce", password: "blueivy")
+      User.create!(name: "Beyonce", username: "mrs_jayz", password: "blueivy")
 
       get api_v1_users_path
 
@@ -85,6 +85,28 @@ RSpec.describe "Users API", type: :request do
       expect(json[:data][0][:attributes]).to_not have_key(:password)
       expect(json[:data][0][:attributes]).to_not have_key(:password_digest)
       expect(json[:data][0][:attributes]).to_not have_key(:api_key)
+    end
+  end
+
+  describe "#show" do
+    xit "returns a users’s basic info as well as viewing parties they are hosting and attending" do
+
+    end
+    xit "requires the user ID for the given user in the path" do
+
+    end
+    xit "return an empty collection of viewing parties if the user has not hosted or been invited to any parties" do
+
+    end
+    xit " does NOT include any sensitive data in the response" do
+      # password digest
+      # API key
+    end
+
+    context "sad path" do
+      xit "returns 404 with invalid user id" do
+        
+      end
     end
   end
 end
