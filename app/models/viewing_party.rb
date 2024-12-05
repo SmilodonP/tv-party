@@ -1,3 +1,5 @@
+require 'bcrypt'
+
 class ViewingParty < ApplicationRecord
   validates :name, presence: true, length: { maximum: 99 }
   validates :start_time, presence: true
@@ -5,7 +7,9 @@ class ViewingParty < ApplicationRecord
   validate :end_time_after_start_time
   validates :movie_id, presence: true, numericality: { only_integer: true }
   validates :movie_title, presence: true
-  validate :valid_invitees
+
+  has_many :invitations
+  has_many :users, through: :invitations
 
 private
 
@@ -21,12 +25,12 @@ private
   #   end
   # end
 
-  def valid_invitees
-    if invitees.blank? || !invitees.is_a?(Array)
-      errors.add(:invitees, "must be an array of user IDs")
-    elsif invitees.any? { |id| !User.exists?(id) }
-      errors.add(:invitees, "contains invalid user IDs")
-    end
-  end
+  # def valid_invitees
+  #   if invitees.blank? || !invitees.is_a?(Array)
+  #     errors.add(:invitees, "must be an array of user IDs")
+  #   elsif invitees.any? { |id| !User.exists?(id) }
+  #     errors.add(:invitees, "contains invalid user IDs")
+  #   end
+  # end
 
 end

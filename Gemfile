@@ -37,7 +37,7 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 gem "faraday"
-
+gem "bcrypt"
 gem "jsonapi-serializer"
 
 group :development, :test do

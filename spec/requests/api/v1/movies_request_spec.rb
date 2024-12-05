@@ -4,15 +4,21 @@ RSpec.describe "Movie Endpoints:", type: :request do
   describe "#index" do
     context "top rated movies" do
       it "retrieves the title and vote average of the top 20 movies", :vcr do
-        get "/api/v1/movies/index"
-
+        get "/api/v1/movies"
+        puts response.status
+        puts response.body
         expect(response).to be_successful
         json = JSON.parse(response.body, symbolize_names: true)
 
-        expect(json[:data]).not_to be(nil)        
+        expect(json[:data]).not_to be(nil)  
+        expect(json[:data]).to be_an(Array)
         expect(json[:data].length).to eql(20)
-        expect(json[:data][:attributes]).to have_key(:title)
-        expect(json[:data][:attributes]).to have_key(:vote_average)
+
+        json[:data].each do |movie|
+          expect(movie).to have_key(:attributes)
+          expect(movie[:attributes]).to have_key(:title)
+          expect(movie[:attributes]).to have_key(:vote_average)
+        end
       end
     end
 
