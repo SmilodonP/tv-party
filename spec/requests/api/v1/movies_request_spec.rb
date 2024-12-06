@@ -26,20 +26,25 @@ RSpec.describe "Movie Endpoints:", type: :request do
       it "returns the movie's details", :vcr do
         get "/api/v1/movies/122"
         expect(response).to be_successful
+        movie = JSON.parse(response.body, symbolize_names: true)
+        expect(movie[:data]).not_to be(nil) 
+
+        expect(movie[:data]).to have_key(:attributes)
+        expect(movie[:data][:attributes]).to have_key(:title)
+        expect(movie[:data][:attributes]).to have_key(:release_year)
+        expect(movie[:data][:attributes]).to have_key(:vote_average)
+        expect(movie[:data][:attributes]).to have_key(:runtime)
+        expect(movie[:data][:attributes]).to have_key(:genres)
+        expect(movie[:data][:attributes]).to have_key(:summary)
+        expect(movie[:data][:attributes]).to have_key(:cast)
+        expect(movie[:data][:attributes]).to have_key(:reviews)
+      end
+
+      it "raises error for bad request", :vcr do
+        get "/api/v1/movies/0"
+        expect(response).not_to be_successful
         json = JSON.parse(response.body, symbolize_names: true)
-
-        expect(json[:data]).not_to be(nil) 
-        expect(json[:data].length).to eql(1)
-
-        expect(movie).to have_key(:attributes)
-        expect(movie[:attributes]).to have_key(:title)
-        expect(movie[:attributes]).to have_key(:release_year)
-        expect(movie[:attributes]).to have_key(:vote_average)
-        expect(movie[:attributes]).to have_key(:runtime)
-        expect(movie[:attributes]).to have_key(:genres)
-        expect(movie[:attributes]).to have_key(:description)
-        expect(movie[:attributes]).to have_key(:cast)
-        expect(movie[:attributes]).to have_key(:reviews)
+        expect(json[:error]).to eq("Failed to fetch movie details, please check movie id and try again")
       end
     end
   end

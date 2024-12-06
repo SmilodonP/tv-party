@@ -12,6 +12,6 @@ RSpec.describe User, type: :model do
 
   describe "relationships" do
     it {should have_many :invitations}
-    it {should have_many(:viewing_parties).through :invitations}
+    it {should have_many :viewing_parties}
   end
 end

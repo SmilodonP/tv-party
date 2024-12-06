@@ -13,7 +13,7 @@ class Api::V1::MoviesController < ApplicationController
       movie = MoviesGateway.get_movie_details(params[:id])
       render json: MovieSerializer.format_movie_details(movie)
     rescue => e
-      render json: { error: "Failed to fetch movie details", details: e.message }, status: :bad_request
+      render json: { error: "Failed to fetch movie details, please check movie id and try again", details: e.message }, status: :bad_request
     end
   end
 end
