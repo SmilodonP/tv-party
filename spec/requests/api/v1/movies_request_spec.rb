@@ -5,8 +5,6 @@ RSpec.describe "Movie Endpoints:", type: :request do
     context "top rated movies" do
       it "retrieves the title and vote average of the top 20 movies", :vcr do
         get "/api/v1/movies"
-        puts response.status
-        puts response.body
         expect(response).to be_successful
         json = JSON.parse(response.body, symbolize_names: true)
 
@@ -38,7 +36,12 @@ RSpec.describe "Movie Endpoints:", type: :request do
 
   describe "#show" do
     context "movie details" do
-      xit "returns the movie's details" do
+      it "returns the movie's details", :vcr do
+        get "/api/v1/movies/122"
+        expect(response).to be_successful
+        json = JSON.parse(response.body, symbolize_names: true)
+
+        expect(json[:data]).not_to be(nil)  
         # Title
         # Release year
         # Vote average

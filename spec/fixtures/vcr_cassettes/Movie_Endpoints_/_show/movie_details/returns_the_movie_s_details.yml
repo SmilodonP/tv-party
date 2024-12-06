@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/122
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+      Authorization:
+      - Bearer <IMDB_API_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 05 Dec 2024 23:48:56 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=25099
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - a14b670f43c47c4829849214e7f90447
+      X-Memc-Age:
+      - '36'
+      X-Memc-Expires:
+      - '25099'
+      Etag:
+      - W/"2c0f133b882f9d698ca88bb885154a6e"
+      Vary:
+      - Accept-Encoding,accept-encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 422414d66021e4e123bcb2b5087f7042.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - u79jvNUYMmtBrJfpF-wdEuHv75K6Iuezh3bp1HnU6kHvshX_q1522g==
+      Age:
+      - '52'
+    body:
+      encoding: UTF-8
+      string: '{"adult":false,"backdrop_path":"/5JrZAtyk3LwiiAWLW0kwz41XZJC.jpg","belongs_to_collection":{"id":119,"name":"The
+        Lord of the Rings Collection","poster_path":"/oENY593nKRVL2PnxXsMtlh8izb4.jpg","backdrop_path":"/bccR2CGTWVVSZAG0yqmy3DIvhTX.jpg"},"budget":94000000,"genres":[{"id":12,"name":"Adventure"},{"id":14,"name":"Fantasy"},{"id":28,"name":"Action"}],"homepage":"http://www.lordoftherings.net","id":122,"imdb_id":"tt0167260","origin_country":["US"],"original_language":"en","original_title":"The
+        Lord of the Rings: The Return of the King","overview":"As armies mass for
+        a final battle that will decide the fate of the world--and powerful, ancient
+        forces of Light and Dark compete to determine the outcome--one member of the
+        Fellowship of the Ring is revealed as the noble heir to the throne of the
+        Kings of Men. Yet, the sole hope for triumph over evil lies with a brave hobbit,
+        Frodo, who, accompanied by his loyal friend Sam and the hideous, wretched
+        Gollum, ventures deep into the very dark heart of Mordor on his seemingly
+        impossible quest to destroy the Ring of Power.​","popularity":147.186,"poster_path":"/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg","production_companies":[{"id":12,"logo_path":"/2ycs64eqV5rqKYHyQK0GVoKGvfX.png","name":"New
+        Line Cinema","origin_country":"US"},{"id":11,"logo_path":"/6FAuASQHybRkZUk08p9PzSs9ezM.png","name":"WingNut
+        Films","origin_country":"NZ"},{"id":5237,"logo_path":"/mlnr7vsBHvLye8oEb5A76C0t8x9.png","name":"The
+        Saul Zaentz Company","origin_country":"US"}],"production_countries":[{"iso_3166_1":"NZ","name":"New
+        Zealand"},{"iso_3166_1":"US","name":"United States of America"}],"release_date":"2003-12-17","revenue":1118888979,"runtime":201,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"There
+        can be no triumph without loss. No victory without suffering. No freedom without
+        sacrifice.","title":"The Lord of the Rings: The Return of the King","video":false,"vote_average":8.482,"vote_count":24259}'
+  recorded_at: Thu, 05 Dec 2024 23:49:48 GMT
+recorded_with: VCR 6.3.1

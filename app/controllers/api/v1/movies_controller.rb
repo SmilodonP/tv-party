@@ -10,10 +10,11 @@ class Api::V1::MoviesController < ApplicationController
 
   def show
     begin 
-      movie = MoviesGateway.get_movie_details(find_by(params[:id])
+      movie = MoviesGateway.get_movie_details(params[:id])
       render json: MovieSerializer.format_movie_details(movie)
     rescue => e
-      render json: { error: "Failed to fetch movie details" }, status: :bad_request
+      render json: { error: "Failed to fetch movie details", details: e.message }, status: :bad_request
     end
   end
+  
 end

@@ -48,13 +48,13 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 88bce767af5e31f726ade38ea5253bd4.cloudfront.net (CloudFront)
+      - 1.1 a70648d67d4a5a7f7eed7b14595ab4fe.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN52-P2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - lYAZA-ItfhSVenWc9cds5BVv8Vl0TcvA_yykQPpiX6XYvxuF90e-kw==
+      - VFWcjtXozOfLTzn698DR9apBbJXPdj40f4L2UMAkLowkizwD4ObwRw==
       Age:
       - '22654'
     body:
