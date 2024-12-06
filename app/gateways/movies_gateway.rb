@@ -18,7 +18,6 @@ class MoviesGateway
     def movie_search(search_params)
       endpoint = "/search/movie"
       params = { query: search_params, adult: false, language: "en-US", page: 1 }
-      binding.pry
       response = fetch_data(endpoint, params)
       response[:results].map { |movie_data| Movies.new(movie_data) }
     end
@@ -34,7 +33,6 @@ class MoviesGateway
       if response.success?
         JSON.parse(response.body, symbolize_names: true)
       else
-        Rails.logger.error("Failed request: #{response.status} - #{response.body}")
         raise "Failed to fetch data from #{endpoint}: #{response.status} #{response.body}"
       end
     end

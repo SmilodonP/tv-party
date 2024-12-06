@@ -16,5 +16,4 @@ class Api::V1::MoviesController < ApplicationController
       render json: { error: "Failed to fetch movie details", details: e.message }, status: :bad_request
     end
   end
-  
 end

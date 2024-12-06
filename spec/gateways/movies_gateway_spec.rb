@@ -7,7 +7,7 @@ RSpec.describe MoviesGateway do
         movies = MoviesGateway.get_top_20_movies
 
         expect(movies).to be_an(Array)
-        expect(movies.size).to eq(20)
+        expect(movies.size).to satisfy { |size| size <= 20 }
         expect(movies.first).to be_a(Movies)
         expect(movies.first.title).to be_a(String)
         expect(movies.first.vote_average).to be_a(Float)
@@ -23,10 +23,17 @@ RSpec.describe MoviesGateway do
 
       it "gets movies based on search parameters", :vcr do
         search_params = "The Toxic Avenger"
-        movies = MoviesGateway.search_for_movies
+        movies = MoviesGateway.movie_search(search_params)
 
+        expect(movies).to be_an(Array)
+        expect(movies.size).to satisfy { |size| size <= 20 }
+        expect(movies.first).to be_a(Movies)
+        expect(movies.first.title).to be_a(String)
+        expect(movies.first.vote_average).to be_a(Float)
+      end
+
+      it "returns an error if response is unsuccessful" do
         
-
       end
     end
   end

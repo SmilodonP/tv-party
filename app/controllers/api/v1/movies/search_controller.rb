@@ -1,7 +1,5 @@
 class Api::V1::Movies::SearchController < ApplicationController
   def index
-    Rails.logger.info "Request received at /api/v1/movies/search"
-    binding.pry
     begin
       search_params = params[:query].to_s
       puts "Searching for: #{search_params}"
