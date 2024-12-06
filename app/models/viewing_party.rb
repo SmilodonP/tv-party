@@ -9,7 +9,7 @@ class ViewingParty < ApplicationRecord
   validates :movie_title, presence: true
 
   has_many :invitations
-  has_many :users, through: :invitations
+  belongs_to :user
 
 private
 
@@ -22,14 +22,6 @@ private
   # def enough_party_time
   #   if (end_time - start_time) < movie([:attributes][:runtime])
   #     errors.add("Not Enough Party Time!")
-  #   end
-  # end
-
-  # def valid_invitees
-  #   if invitees.blank? || !invitees.is_a?(Array)
-  #     errors.add(:invitees, "must be an array of user IDs")
-  #   elsif invitees.any? { |id| !User.exists?(id) }
-  #     errors.add(:invitees, "contains invalid user IDs")
   #   end
   # end
 

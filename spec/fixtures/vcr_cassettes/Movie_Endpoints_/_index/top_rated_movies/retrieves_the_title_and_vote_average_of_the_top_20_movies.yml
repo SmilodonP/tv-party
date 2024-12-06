@@ -46,17 +46,15 @@ http_interactions:
       - Accept-Encoding,accept-encoding
       - Origin
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 44e92eddc431cc09e1e2c5b24edc90f8.cloudfront.net (CloudFront)
+      - 1.1 77cfd797d789c3b8bc1b8f2f8a42a9c6.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN52-P2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - TtdcFpTEV9YM0Ur2z16j1j5bqpEIiHGtl3IRkrkC-8ISZs-EcZq0sw==
-      Age:
-      - '79'
+      - gqybMrH6hAm81IyqoljadoN-w4kGBP7WL6fZBfqz1NUPzlcalYkE8g==
     body:
       encoding: UTF-8
       string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/tElnmtQ6yz1PjN1kePNl8yMSb59.jpg","genre_ids":[16,12,10751,35],"id":1241982,"original_language":"en","original_title":"Moana
@@ -160,5 +158,5 @@ http_interactions:
         a group of young space colonizers come face to face with the most terrifying
         life form in the universe.","popularity":710.489,"poster_path":"/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg","release_date":"2024-08-13","title":"Alien:
         Romulus","video":false,"vote_average":7.239,"vote_count":2541}],"total_pages":47503,"total_results":950050}'
-  recorded_at: Fri, 06 Dec 2024 16:42:57 GMT
+  recorded_at: Fri, 06 Dec 2024 16:41:38 GMT
 recorded_with: VCR 6.3.1

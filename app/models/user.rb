@@ -7,9 +7,7 @@ class User < ApplicationRecord
   has_secure_password
   has_secure_token :api_key
 
-  enum status: { guest: 0, host: 1 }
-
   has_many :invitations
-  has_many :viewing_parties, through: :invitations
+  has_many :viewing_parties
 
 end
