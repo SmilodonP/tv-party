@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :viewing_parties, only: :create
       resources :movies, only: [:index, :show]
       namespace :movies do
-        resources :search, only: [:index, :update]
+        resources :search, only: [:index]
       end
     end
   end

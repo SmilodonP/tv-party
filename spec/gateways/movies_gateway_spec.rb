@@ -20,6 +20,14 @@ RSpec.describe MoviesGateway do
         expect(movie.title).to be_a(String)
         expect(movie.vote_average).to be_a(Float)
       end
+
+      it "gets movies based on search parameters", :vcr do
+        search_params = "The Toxic Avenger"
+        movies = MoviesGateway.search_for_movies
+
+        
+
+      end
     end
   end
 end

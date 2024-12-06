@@ -19,19 +19,6 @@ RSpec.describe "Movie Endpoints:", type: :request do
         end
       end
     end
-
-    context "movie search" do
-      xit "retrieves movies based on a search query" do
-
-      end
-      xit "requires that the search term is passed as a query parameter" do
-
-      end
-      xit "retrieves a maximum of 20 results" do
-
-      end
-      xit "includes the title and the vote average of every movie"
-    end
   end
 
   describe "#show" do
