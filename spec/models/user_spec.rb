@@ -11,7 +11,8 @@ RSpec.describe User, type: :model do
   end
 
   describe "relationships" do
+    it {should have_many(:hosted_parties).class_name('ViewingParty').with_foreign_key('host_id') }
     it {should have_many :invitations}
-    it {should have_many :viewing_parties}
+    it {should have_many(:viewing_parties).through :invitations}
   end
 end

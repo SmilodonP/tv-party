@@ -25,7 +25,6 @@ class MoviesGateway
     private
 
     def fetch_data(endpoint, params = {})
-      puts "Requesting with params: #{params}"
       response = Faraday.get("#{BASE_URL}#{endpoint}", params) do |faraday|
         faraday.headers["Authorization"] = "Bearer #{Rails.application.credentials.themoviedb[:key]}"
       end
