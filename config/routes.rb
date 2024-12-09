@@ -9,7 +9,9 @@ Rails.application.routes.draw do
       end
       resources :users, only: [:create, :index, :show]
       resources :sessions, only: :create
-      resources :viewing_parties, only: :create
+      resources :viewing_parties, only: [:create] do
+        post 'invitees', to: 'viewing_parties#add_invitee'
+      end
       resources :movies, only: [:index, :show]
     end
   end

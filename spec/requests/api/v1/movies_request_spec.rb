@@ -24,7 +24,7 @@ RSpec.describe "Movie Endpoints:", type: :request do
   describe "#show" do
     context "movie details" do
       it "returns the movie's details", :vcr do
-        get "/api/v1/movies/122"
+        get "/api/v1/movies/122" 
         expect(response).to be_successful
         movie = JSON.parse(response.body, symbolize_names: true)
         expect(movie[:data]).not_to be(nil) 

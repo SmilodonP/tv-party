@@ -31,15 +31,15 @@ class MovieSerializer
           summary: movie.summary,
           cast: movie.cast.map do |cast_member|
             {
-              character: cast_member.character,
-              actor: cast_member.actor
+              character: cast_member[:character],
+              actor: cast_member[:actor]
             }
           end,
           total_reviews: movie.total_reviews,
           reviews: movie.reviews.map do |review|
             {
-              author: review.author,
-              review: review.review
+              author: review[:author],
+              review: review[:review]
             }
           end
         }
