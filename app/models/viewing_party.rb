@@ -9,7 +9,8 @@ class ViewingParty < ApplicationRecord
   validates :movie_title, presence: true
 
   has_many :invitations
-  belongs_to :user
+  has_many :invitees, through: :invitations, source: :user
+  belongs_to :host, class_name: 'User', foreign_key: 'host_id'
 
 private
 

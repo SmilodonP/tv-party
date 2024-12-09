@@ -11,7 +11,8 @@ class MoviesGateway
 
     def get_movie_details(movie_id)
       endpoint = "/movie/#{movie_id}"
-      movie_data = fetch_data(endpoint)
+      params = { append_to_response: "credits,reviews", language: "en-US" }
+      movie_data = fetch_data(endpoint, params)
       Movie.new(movie_data)
     end
 
@@ -25,7 +26,6 @@ class MoviesGateway
     private
 
     def fetch_data(endpoint, params = {})
-      puts "Requesting with params: #{params}"
       response = Faraday.get("#{BASE_URL}#{endpoint}", params) do |faraday|
         faraday.headers["Authorization"] = "Bearer #{Rails.application.credentials.themoviedb[:key]}"
       end

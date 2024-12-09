@@ -9,11 +9,12 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def index
+    users= User.all
     render json: UserSerializer.format_user_list(User.all)
   end
 
   def show
-    
+    user = User.find(user_params)
   end
 
   private

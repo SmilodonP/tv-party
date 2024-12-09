@@ -27,62 +27,62 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 06 Dec 2024 16:32:56 GMT
+      - Mon, 09 Dec 2024 19:48:51 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=3290
+      - public, max-age=17574
       X-Memc:
       - HIT
       X-Memc-Key:
       - 5ec069def83afaac1bdf848d582c43f4
       X-Memc-Age:
-      - '19591'
+      - '7627'
       X-Memc-Expires:
-      - '3290'
+      - '17574'
       Etag:
-      - W/"fd3463dff0587285ff0401ff602934fb"
+      - W/"26cbf51a0e2d7faa70549b54dcdcd45f"
       Vary:
       - Accept-Encoding,accept-encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 0ecc9d4faf14441bafb84971a4117abc.cloudfront.net (CloudFront)
+      - 1.1 d9fe97589e952f97209f7a422c89d876.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN52-P2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - R7H28wSreFW_U_6TsHEkki0iRGeXvLUQkeT5x8EtJhv9oUz6kZyNTw==
+      - LedIefhPkexmMweJIoIIcoNLRY03XgpylA8s5l-aqMV_fpX3fBopoA==
       Age:
-      - '663'
+      - '4155'
     body:
       encoding: UTF-8
       string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/ofIwwNjI0TDOPZeAOIXSrXJQqwi.jpg","genre_ids":[35,27,878],"id":15239,"original_language":"en","original_title":"The
         Toxic Avenger","overview":"A gang of thugs devise a cruel hoax that goes horribly
         wrong as Melvin, a nerdy emaciated janitor at the local health club, is cast
-        through a third story window into a vat of hazardous toxic waste.","popularity":13.614,"poster_path":"/ann4b1EYCIBhARaXE8T2reNtPo1.jpg","release_date":"1984-05-15","title":"The
-        Toxic Avenger","video":false,"vote_average":6.296,"vote_count":548},{"adult":false,"backdrop_path":"/qmMkaK6Tq75o6Wb6BVbr3pOnpbF.jpg","genre_ids":[28,35,27,878],"id":338969,"original_language":"en","original_title":"The
+        through a third story window into a vat of hazardous toxic waste.","popularity":8.965,"poster_path":"/ann4b1EYCIBhARaXE8T2reNtPo1.jpg","release_date":"1984-05-15","title":"The
+        Toxic Avenger","video":false,"vote_average":6.3,"vote_count":548},{"adult":false,"backdrop_path":"/qmMkaK6Tq75o6Wb6BVbr3pOnpbF.jpg","genre_ids":[28,35,27,878],"id":338969,"original_language":"en","original_title":"The
         Toxic Avenger","overview":"A horrible toxic accident transforms downtrodden
         janitor Winston Gooze into a new evolution of hero: THE TOXIC AVENGER! Now
         wielding a glowing mop with super-human strength, he must race against time
         to save his son and stop a ruthless and power-hungry tyrant bent on harnessing
-        toxic superpowers to strengthen his polluted empire.","popularity":6.539,"poster_path":"/yoHmawu0XKxfch6py0xmU1NwpiH.jpg","release_date":"2023-09-21","title":"The
+        toxic superpowers to strengthen his polluted empire.","popularity":3.498,"poster_path":"/yoHmawu0XKxfch6py0xmU1NwpiH.jpg","release_date":"2023-09-21","title":"The
         Toxic Avenger","video":false,"vote_average":7.5,"vote_count":4},{"adult":false,"backdrop_path":"/rydjFBcArIdctIRD9kgRcoIyH6U.jpg","genre_ids":[35,27,878],"id":27601,"original_language":"en","original_title":"Citizen
         Toxie: The Toxic Avenger IV","overview":"A horrific explosion creates a dimensional
         portal between Tromaville and its dimensional mirror image, Amortville. While
         the Toxie is trapped in the mirror dimension, Tromaville comes under the control
-        of his evil doppelganger, the Noxious Offender.","popularity":10.432,"poster_path":"/wR4VvqrRd2r9M4GYXPnoV02aUNG.jpg","release_date":"2001-11-01","title":"Citizen
+        of his evil doppelganger, the Noxious Offender.","popularity":20.318,"poster_path":"/wR4VvqrRd2r9M4GYXPnoV02aUNG.jpg","release_date":"2001-11-01","title":"Citizen
         Toxie: The Toxic Avenger IV","video":false,"vote_average":6.3,"vote_count":142},{"adult":false,"backdrop_path":"/oZQNh7OuSsLyPDyyEXPOFILQ6ko.jpg","genre_ids":[35,27,878],"id":28165,"original_language":"en","original_title":"The
         Toxic Avenger Part II","overview":"Melvin Junko was a nerdy weakling until
         he fell into a vat of toxic waste, turning him into the first ever superhuman
-        creature from New Jersey. This time, he takes on Tokyo.","popularity":10.551,"poster_path":"/m5o7B3VSAjvinjtSYxXD38senvb.jpg","release_date":"1989-07-15","title":"The
+        creature from New Jersey. This time, he takes on Tokyo.","popularity":13.812,"poster_path":"/m5o7B3VSAjvinjtSYxXD38senvb.jpg","release_date":"1989-07-15","title":"The
         Toxic Avenger Part II","video":false,"vote_average":5.4,"vote_count":168},{"adult":false,"backdrop_path":"/7nkc6FEalesKjvW1lWDlObdjWa4.jpg","genre_ids":[35,27,878],"id":28169,"original_language":"en","original_title":"The
         Toxic Avenger Part III: The Last Temptation of Toxie","overview":"Desperate
         to raise money for the experimental surgery that could restore his blind fiancee''s
         eyesight, Toxie accepts a lucrative job with the evil multinational conglomerate
-        Apocalypse Inc.","popularity":12.514,"poster_path":"/yEOliKp5hZIBR0lDr9L3mJLijT0.jpg","release_date":"1989-11-24","title":"The
+        Apocalypse Inc.","popularity":13.712,"poster_path":"/yEOliKp5hZIBR0lDr9L3mJLijT0.jpg","release_date":"1989-11-24","title":"The
         Toxic Avenger Part III: The Last Temptation of Toxie","video":false,"vote_average":5.0,"vote_count":122},{"adult":false,"backdrop_path":"/l5JMz8whHg0hZfWVxt5UZVx89uY.jpg","genre_ids":[35,878,10402],"id":517289,"original_language":"en","original_title":"The
         Toxic Avenger: The Musical","overview":"Based on Lloyd Kaufman’s cult 1984
         comedy film, The Toxic Avenger The Musical tells the story of the citizens
@@ -94,17 +94,17 @@ http_interactions:
         New Jersey’s first superhero! Toxie is a 7-foot mutant freak with superhuman
         strength and a supersized heart to match. His aims are to save heavily polluted
         New Jersey, end global warming, win the heart of the prettiest (blindest)
-        librarian in town - and get home in time for dinner!","popularity":1.771,"poster_path":"/b2auzpNt6Vk4vbJQ4zA1bMPvQ1W.jpg","release_date":"2018-04-08","title":"The
+        librarian in town - and get home in time for dinner!","popularity":1.423,"poster_path":"/b2auzpNt6Vk4vbJQ4zA1bMPvQ1W.jpg","release_date":"2018-04-08","title":"The
         Toxic Avenger: The Musical","video":true,"vote_average":6.3,"vote_count":9},{"adult":false,"backdrop_path":null,"genre_ids":[],"id":517316,"original_language":"en","original_title":"Heart
         of Fartness: Troma''s First VR Experience Starring the Toxic Avenger","overview":"The
         Toxic Avenger has a major midlife crisis and must travel to a mythical land
         called the \"Heart of Fartness,\" deep in the Panamanian jungle, in order
-        to regain his place as the first Super-Human-Hero from New Jersey.","popularity":2.353,"poster_path":"/830F2oXpoKNhlMINdSZo5g3s5QB.jpg","release_date":"2017-06-29","title":"Heart
+        to regain his place as the first Super-Human-Hero from New Jersey.","popularity":1.823,"poster_path":"/830F2oXpoKNhlMINdSZo5g3s5QB.jpg","release_date":"2017-06-29","title":"Heart
         of Fartness: Troma''s First VR Experience Starring the Toxic Avenger","video":false,"vote_average":0.0,"vote_count":0},{"adult":false,"backdrop_path":null,"genre_ids":[16,878,12],"id":1238834,"original_language":"en","original_title":"Dr.
         Platypus and the Toxic Avengers: The Probe","overview":"Dr. Platypus, Whiskers
         the Rat and Flaps the Flying Fox were finishing off some work in Dr. Platypus''
         laboratory, when they heard some strange messages from deep space on their
-        radio.","popularity":0.174,"poster_path":"/5ORaaAdseIkUoV0grkfmOKKWUtG.jpg","release_date":"","title":"Dr.
+        radio.","popularity":0.039,"poster_path":"/5ORaaAdseIkUoV0grkfmOKKWUtG.jpg","release_date":"","title":"Dr.
         Platypus and the Toxic Avengers: The Probe","video":false,"vote_average":8.0,"vote_count":1}],"total_pages":1,"total_results":8}'
-  recorded_at: Fri, 06 Dec 2024 16:43:59 GMT
+  recorded_at: Mon, 09 Dec 2024 20:58:06 GMT
 recorded_with: VCR 6.3.1
